@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:SloperAPI}",
+            "name": "Debug SloperAPIExec",
+            "program": "${workspaceFolder:SloperAPI}/.build/debug/SloperAPIExec",
+            "preLaunchTask": "swift: Build Debug SloperAPIExec"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:SloperAPI}",
+            "name": "Release SloperAPIExec",
+            "program": "${workspaceFolder:SloperAPI}/.build/release/SloperAPIExec",
+            "preLaunchTask": "swift: Build Release SloperAPIExec"
+        }
+    ]
+}
