@@ -46,13 +46,19 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let averageVolume: Int?
     public let trailingAnnualDividendYield: Double?
     public let trailingEps: Double?
+    public let regularMarketChange: Double?
+    public let regularMarketChangePercent: Double?
+    public let regularMarketChangePreviousClose: Double?
     
-    public init(symbol: String?, currency: String?, fullExchangeName: String?, displayName: String?, regularMarketPrice: Double?, regularMarketPreviousClose: Double?, regularMarketTime: Date?, regularMarketOpen: Double?, regularMarketDayHigh: Double?, regularMarketDayLow: Double?, regularMarketVolume: Int?, trailingPE: Double?, marketCap: Double?, fiftyTwoWeekLow: Double?, fiftyTwoWeekHigh: Double?, averageVolume: Int?, trailingAnnualDividendYield: Double?, trailingEps: Double?) {
+    public init(symbol: String?, currency: String?, fullExchangeName: String?, displayName: String?, regularMarketPrice: Double?, regularMarketChange: Double?, regularMarketChangePercent: Double?, regularMarketChangePreviousClose: Double?, regularMarketPreviousClose: Double?, regularMarketTime: Date?, regularMarketOpen: Double?, regularMarketDayHigh: Double?, regularMarketDayLow: Double?, regularMarketVolume: Int?, trailingPE: Double?, marketCap: Double?, fiftyTwoWeekLow: Double?, fiftyTwoWeekHigh: Double?, averageVolume: Int?, trailingAnnualDividendYield: Double?, trailingEps: Double?) {
         self.symbol = symbol
         self.currency = currency
         self.fullExchangeName = fullExchangeName
         self.displayName = displayName
         self.regularMarketPrice = regularMarketPrice
+        self.regularMarketChange = regularMarketChange
+        self.regularMarketChangePercent = regularMarketChangePercent
+        self.regularMarketChangePreviousClose = regularMarketChangePreviousClose
         self.regularMarketPreviousClose = regularMarketPreviousClose
         self.regularMarketTime = regularMarketTime
         self.regularMarketOpen = regularMarketOpen
@@ -66,6 +72,8 @@ public struct Quote: Codable, Identifiable, Hashable {
         self.averageVolume = averageVolume
         self.trailingAnnualDividendYield = trailingAnnualDividendYield
         self.trailingEps = trailingEps
+
+        
     }
 
     
