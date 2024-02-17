@@ -50,7 +50,7 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let regularMarketChangePercent: Double?
     public let regularMarketChangePreviousClose: Double?
     
-    public init(symbol: String?=nil, currency: String?=nil, fullExchangeName: String?=nil, displayName: String?=nil, regularMarketPrice: Double?=nil, regularMarketChange: Double?=nil, regularMarketChangePercent: Double?=nil, regularMarketChangePreviousClose: Double?=nil, regularMarketPreviousClose: Double?=nil, regularMarketTime: Date?=nil, regularMarketOpen: Double?=nil, regularMarketDayHigh: Double?=nil, regularMarketDayLow: Double?=nil, regularMarketVolume: Int?=nil, trailingPE: Double?=nil, marketCap: Double?=nil, fiftyTwoWeekLow: Double?=nil, fiftyTwoWeekHigh: Double?=nil, averageVolume: Int?=nil, trailingAnnualDividendYield: Double?=nil, trailingEps: Double?=nil) {
+    public init(symbol: String, currency: String?=nil, fullExchangeName: String?=nil, displayName: String?=nil, regularMarketPrice: Double?=nil, regularMarketChange: Double?=nil, regularMarketChangePercent: Double?=nil, regularMarketChangePreviousClose: Double?=nil, regularMarketPreviousClose: Double?=nil, regularMarketTime: Date?=nil, regularMarketOpen: Double?=nil, regularMarketDayHigh: Double?=nil, regularMarketDayLow: Double?=nil, regularMarketVolume: Int?=nil, trailingPE: Double?=nil, marketCap: Double?=nil, fiftyTwoWeekLow: Double?=nil, fiftyTwoWeekHigh: Double?=nil, averageVolume: Int?=nil, trailingAnnualDividendYield: Double?=nil, trailingEps: Double?=nil) {
         self.symbol = symbol
         self.currency = currency
         self.fullExchangeName = fullExchangeName
