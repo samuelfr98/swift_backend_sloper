@@ -28,7 +28,7 @@ public struct Quote: Codable, Identifiable, Hashable {
     
     public let id = UUID()
     
-    public let symbol: String?
+    public let symbol: String
     public let currency: String?
     public let fullExchangeName: String?
     public let displayName: String?
