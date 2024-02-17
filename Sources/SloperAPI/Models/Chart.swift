@@ -75,7 +75,7 @@ public struct ChartMeta: Decodable {
     
     
     
-    public init(currency: String, symbol: String, regularMarketPrice: Double?, previousClose: Double?, gmtOffSetMilliseconds: Int, regularTradingPeriodStartDate: Date, regularTradingPeriodEndDate: Date) {
+    public init(currency: String, symbol: String, regularMarketPrice: Double?=nil, previousClose: Double?=nil, gmtOffSetMilliseconds: Int, regularTradingPeriodStartDate: Date, regularTradingPeriodEndDate: Date) {
         self.currency = currency
         self.symbol = symbol
         self.regularMarketPrice = regularMarketPrice
