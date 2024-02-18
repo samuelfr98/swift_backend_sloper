@@ -27,7 +27,7 @@ public enum ChartRange: String, CaseIterable {
         case .oneWeek: return "5m"
         case .oneMonth: return "90m"
         case .threeMonth, .sixMonth, .ytd, .oneYear, .twoYear: return "1d"
-        case .fiveYear, .tenYear: return "1wk"
+        case .fiveYear, .tenYear: return "1mo"
         case .max: return "3mo"
         }
     }
