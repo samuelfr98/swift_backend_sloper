@@ -32,7 +32,6 @@ public struct ChartData: Decodable {
     }
     
     enum IndicatorKeys: CodingKey {
-        case Datetime   // If requesting where interval < 1d
         case Date       // If requesting where interval >= 1d
         case High
         case Low
@@ -91,16 +90,17 @@ public struct ChartMeta: Decodable {
 
 public struct Indicator: Decodable {
     
-    public let Datetime: String?
-    public let Date: String?
+    public let Date: Date
     public let Open: Double
     public let Close: Double
     public let High: Double
     public let Low: Double
     public let Volume: Int
     
-    public init(Datetime: String, Date: String, Open: Double, Close: Double, High: Double, Low: Double, Volume: Int) {
-        self.Datetime = Datetime
+    
+    
+    public init(Date: Date, Open: Double, Close: Double, High: Double, Low: Double, Volume: Int) {
+        
         self.Date = Date
         self.Open = Open
         self.Close = Close
