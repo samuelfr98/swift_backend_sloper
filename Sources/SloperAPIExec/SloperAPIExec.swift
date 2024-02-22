@@ -17,9 +17,9 @@ struct SloperAPIExec {
         
         do {
             // Fetch MSFT and AAPL Quote details
-//            let quotes = try await sloperAPI
-//                .fetchQuotes(tickers: "MSFT AAPL")
-//            print(quotes)
+            let quotes = try await sloperAPI
+                .fetchQuotes(tickers: "MSFT AAPL")
+            print(quotes)
             
 //            // Fetch MSFT and AAPL ticker data
 //            let tickers = try await sloperAPI
@@ -27,9 +27,9 @@ struct SloperAPIExec {
 //            print(tickers)
 //            
 //            // Fetch last day day of MSFT stock data at minutely intervals
-            let chartData = try await sloperAPI
-                .fetchChartReponse(ticker: "MSFT", range: .oneDay)
-            print(chartData)
+//            let chartData = try await sloperAPI
+//                .fetchChartReponse(ticker: "MSFT", range: .oneDay)
+//            print(chartData)
         } catch {
             print(error.localizedDescription)
         }

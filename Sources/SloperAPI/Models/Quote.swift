@@ -49,8 +49,10 @@ public struct Quote: Codable, Identifiable, Hashable {
     public let regularMarketChange: Double?
     public let regularMarketChangePercent: Double?
     public let regularMarketChangePreviousClose: Double?
+    public let beta: Double?
+    public let yield: Double?
     
-    public init(symbol: String, currency: String?=nil, fullExchangeName: String?=nil, displayName: String?=nil, regularMarketPrice: Double?=nil, regularMarketChange: Double?=nil, regularMarketChangePercent: Double?=nil, regularMarketChangePreviousClose: Double?=nil, regularMarketPreviousClose: Double?=nil, regularMarketTime: Date?=nil, regularMarketOpen: Double?=nil, regularMarketDayHigh: Double?=nil, regularMarketDayLow: Double?=nil, regularMarketVolume: Int?=nil, trailingPE: Double?=nil, marketCap: Double?=nil, fiftyTwoWeekLow: Double?=nil, fiftyTwoWeekHigh: Double?=nil, averageVolume: Int?=nil, trailingAnnualDividendYield: Double?=nil, trailingEps: Double?=nil) {
+    public init(symbol: String, currency: String?=nil, fullExchangeName: String?=nil, displayName: String?=nil, regularMarketPrice: Double?=nil, regularMarketChange: Double?=nil, regularMarketChangePercent: Double?=nil, regularMarketChangePreviousClose: Double?=nil, regularMarketPreviousClose: Double?=nil, regularMarketTime: Date?=nil, regularMarketOpen: Double?=nil, regularMarketDayHigh: Double?=nil, regularMarketDayLow: Double?=nil, regularMarketVolume: Int?=nil, trailingPE: Double?=nil, marketCap: Double?=nil, fiftyTwoWeekLow: Double?=nil, fiftyTwoWeekHigh: Double?=nil, averageVolume: Int?=nil, trailingAnnualDividendYield: Double?=nil, trailingEps: Double?=nil, beta: Double?=nil, yield: Double?=nil) {
         self.symbol = symbol
         self.currency = currency
         self.fullExchangeName = fullExchangeName
@@ -72,6 +74,8 @@ public struct Quote: Codable, Identifiable, Hashable {
         self.averageVolume = averageVolume
         self.trailingAnnualDividendYield = trailingAnnualDividendYield
         self.trailingEps = trailingEps
+        self.beta = beta
+        self.yield = yield
 
         
     }
