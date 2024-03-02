@@ -24,14 +24,14 @@ let decoder = JSONDecoder()
     }()
 
     // Local development API URL
-    private let baseURL = "http://127.0.0.1:8000"
+    private let baseURLLocalTest = "http://127.0.0.1:8000"
     
     public init(){}
     
     
     public func fetchChartReponse(ticker: String, range: ChartRange) async throws -> ChartData? {
         // Contruct URL
-        guard var urlComponents = URLComponents(string: "\(baseURL)/getChartResponse/") else {
+        guard var urlComponents = URLComponents(string: "\(baseURLLocalTest)/getChartResponse/") else {
             throw APIServiceError.invalidURL
         }
         urlComponents.queryItems = [
@@ -54,7 +54,7 @@ let decoder = JSONDecoder()
     
     public func fetchTickers(tickers: String) async throws -> [Ticker] {
         // Contruct URL
-        guard var urlComponents = URLComponents(string: "\(baseURL)/getTicker/") else {
+        guard var urlComponents = URLComponents(string: "\(baseURLLocalTest)/getTicker/") else {
             throw APIServiceError.invalidURL
         }
         urlComponents.queryItems = [.init(name: "ticker", value: tickers)]
@@ -72,7 +72,7 @@ let decoder = JSONDecoder()
     
     public func fetchQuotes(tickers: String) async throws -> [Quote] {
         // Contruct URL
-        guard var urlComponents = URLComponents(string: "\(baseURL)/getQuote/") else {
+        guard var urlComponents = URLComponents(string: "\(baseURLLocalTest)/getQuote/") else {
             throw APIServiceError.invalidURL
         }
         urlComponents.queryItems = [.init(name: "ticker", value: tickers)]
