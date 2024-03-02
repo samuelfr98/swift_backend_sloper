@@ -24,7 +24,8 @@ let decoder = JSONDecoder()
     }()
 
     // Local development API URL
-    private let baseURLLocalTest = "http://127.0.0.1:8000"
+//    private let baseURLLocalTest = "http://127.0.0.1:8000" // All local to host machine
+    private let baseURLLocalTest = "http://10.0.0.82:8000"   // Testing on mobile device on shared wifi
     
     public init(){}
     
